@@ -13,25 +13,14 @@ public class RotateMatrix {
 		}
 		int N = matrix.length;
 		
-		int col1 = 0;
-		int col2 = N-1;
-		int row1 = 0;
-		int row2= N-1;
-		
-		while(row1 < row2) {
-			if(col1 == N && col2 < 0) {
-				row1++;
-				row2--;
-				col1 = 0;
-				col2 = N-1;
+		for(int x=0; x<N/2; x++) {
+			for(int y=x; y < N-x-1; y++) {
+                int temp = matrix[x][y];  
+                matrix[x][y] = matrix[y][N - 1 - x]; 
+                matrix[y][N - 1 - x] = matrix[N - 1 - x][N - 1 - y]; 
+                matrix[N - 1 - x][N - 1 - y] = matrix[N - 1 - y][x]; 
+                matrix[N - 1 - y][x] = temp; 
 			}
-			int temp = matrix[row1][col1];
-			matrix[row1][col1] = matrix[row2][col2];
-			matrix[row2][col2] = temp;
-			
-			col1++;
-			col2--;
-			
 		}
 		
 	}
