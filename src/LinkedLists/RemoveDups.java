@@ -1,30 +1,6 @@
 package LinkedLists;
 import java.util.Hashtable;
 
-class Node {
-    int data;
-    Node next = null;
-
-    Node(int val){
-        this.data =  val;
-    }
-
-    void addToEnd(int val){
-        Node head = this;
-        while(head.next != null){
-            head = head.next;
-        }
-        head.next = new Node(val);
-    }
-
-    void printList(){
-        Node n = this;
-        while(n != null){
-            System.out.println(n.data);
-            n = n.next;
-        }
-    }
-}
 
 public class RemoveDups {
     /*
