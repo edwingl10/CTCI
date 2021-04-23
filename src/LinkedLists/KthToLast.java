@@ -4,6 +4,11 @@ class Index {
     int value = 0;
 }
 public class KthToLast {
+    /**
+     * Implement an algorithm to find the kth to last element of a singly linked list.
+    **/
+
+
     // if linked list size is known
     static int returnKthToLast(Node head, int kth){
         if(kth < 1) return -1;
