@@ -1,6 +1,9 @@
 package StacksAndQueues;
 
 class MultiStack{
+    /**
+     * Describe how you could use a single array to implement three stacks
+     */
     int stack[];
     int tops[];
     int lengths[];
