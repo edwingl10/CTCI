@@ -1,6 +1,7 @@
 package TreesAndGraphs;
 import java.util.ArrayList;
 
+// used for graph
 public class Node {
     public String name;
     ArrayList<Node> children;
