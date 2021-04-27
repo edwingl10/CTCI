@@ -5,9 +5,39 @@ public class TreeNode {
     int val;
     public TreeNode left;
     public TreeNode right;
+    public TreeNode parent;
 
     TreeNode(int val){
         this.val = val;
+    }
+
+    TreeNode insert(TreeNode node, int data)
+    {
+
+        /* 1. If the tree is empty, return a new,
+         single node */
+        if (node == null) {
+            return new TreeNode(data);
+        }
+        else {
+
+            TreeNode temp = null;
+
+            /* 2. Otherwise, recur down the tree */
+            if (data <= node.val) {
+                temp = insert(node.left, data);
+                node.left = temp;
+                temp.parent = node;
+            }
+            else {
+                temp = insert(node.right, data);
+                node.right = temp;
+                temp.parent = node;
+            }
+
+            /* return the (unchanged) node pointer */
+            return node;
+        }
     }
 
     // ************ for debugging purposes ************** //
