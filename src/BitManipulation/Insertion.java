@@ -1,7 +1,5 @@
 package BitManipulation;
 
-import ArraysAndStrings.IsUnique;
-
 public class Insertion {
     /**
      * You are given two 32-bit numbers, N and M,  and two bit positions, i and j.
